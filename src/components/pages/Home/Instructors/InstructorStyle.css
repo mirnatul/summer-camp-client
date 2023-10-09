@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.instructor-container {
+  font-size: 62.5%;
+}
+
+/* body {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */ */
+
+.my-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.my-container .box {
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  margin: 2rem;
+}
+
+.my-container .box:hover .imgBox {
+  transform: translate(-3.5rem, -3.5rem);
+}
+
+.my-container .box:hover .content {
+  transform: translate(2.5rem, 2.5rem);
+}
+
+.imgBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  transition: all 0.5s ease-in-out;
+}
+
+.imgBox img {
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+  resize: both;
+}
+
+.my-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  z-index: 1;
+  align-items: flex-end;
+  text-align: center;
+  transition: 0.5s ease-in-out;
+}
+
+.my-content h2 {
+  display: block;
+  font-size: 2rem;
+  color: #111;
+  font-weight: 500;
+  line-height: 2rem;
+  letter-spacing: 1px;
+}
+
+.my-content span {
+  color: #555;
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+  .my-container .box:hover .my-content {
+    transform: translate(0, 1.5rem);
+  }
+  .my-container .box:hover .imgBox {
+    transform: translate(0, -1.5rem);
+  }
+}
+/*# sourceMappingURL=main.css.map */

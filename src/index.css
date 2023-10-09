@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.button-primary {
+
+
+  @apply bg-[#9875ff] text-white p-2 font-bold rounded-lg
+}
