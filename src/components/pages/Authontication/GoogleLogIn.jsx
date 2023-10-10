@@ -49,7 +49,7 @@ const GoogleLogIn = () => {
 
     return (
         <div>
-            <h1 onClick={handleGoogleLogin} className='flex border p-3 items-center justify-center '><FaGoogle className='mr-2' /> Continue with google</h1>
+            <h1 onClick={handleGoogleLogin} className='flex p-3 items-center justify-center bg-green-600 text-black font-bold'><FaGoogle className='mr-2' /> Continue with google</h1>
 
         </div>
     );

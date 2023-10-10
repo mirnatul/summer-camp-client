@@ -13,58 +13,24 @@ const Register = () => {
     const { user, signUp, googleLogin } = useContext(AuthContext)
     const navigate = useNavigate()
 
-
-   
-
     const onSubmit = data => {
-
-
-
-
-
-
-
         if (data.password !== data.ConfirmPassword) {
-
-
             return errorMessage('Passwords do not match')
-
-
-
-
-
         }
-
-
-
         const { name, Email, password, photo } = data
-
-
-
 
         signUp(Email, password)
             .then(res => {
-
                 const registered = res.user
-
-
                 updateProfile(registered, {
-
                     displayName: name,
                     photoURL: photo
                 })
-
-
                 navigate('/')
-
-
-
                 const data = {
                     name: name, image: photo, email: registered.email,
-                    role : 'student'
+                    role: 'student'
                 }
-
-
                 axios.post('https://dramatix-lab-server-3hg5zxg3j-rayhanuddinfarhad.vercel.app/users', data)
                     .then(function (response) {
                         console.log(response);
@@ -74,66 +40,41 @@ const Register = () => {
                         console.log(error);
                     });
             })
-
             .catch(err => {
-
-                console.log(err);
-        
-            })
-            .catch(err => {
-
                 console.log(err);
             })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            .catch(err => {
+                console.log(err);
+            })
     };
-    console.log(errors);
 
     return (
         <div>
-            <div className="my-10   ">
+            <div className="my-2 text-white">
                 <div className=" ">
-                    <div className="text-center ">
-                        <h1 className="text-5xl font-bold">Register now!</h1>
-                        <p className="py-6">Register now to enjoy our all features!</p>
+                    <div className="text-center py-2">
+                        <h1 className="text-4xl font-bold">Register now!</h1>
                     </div>
-                    <div className="card mx-auto w-full max-w-sm shadow-lg bg-base-100">
+                    <div className="card mx-auto w-full max-w-sm shadow-2xl">
                         <p className='text-error'>{error}</p>
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Name</span>
+                                    <span className="label-text text-white">Name</span>
                                 </label>
-                                <input {...register("name", { required: true })} required type="text" placeholder="Name" className="input input-bordered" />
+                                <input {...register("name", { required: true })} required type="text" placeholder="Name" className="input input-bordered text-black" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Email</span>
+                                    <span className="label-text text-white">Email</span>
                                 </label>
-                                <input {...register("Email", { required: true })} required type="text" placeholder="email" className="input input-bordered" />
+                                <input {...register("Email", { required: true })} required type="text" placeholder="email" className="input input-bordered text-black" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Password</span>
+                                    <span className="label-text text-white">Password</span>
                                 </label>
-                                <input className='input input-bordered'
+                                <input className='input input-bordered text-black'
                                     type="password"
                                     placeholder="Password"
                                     {...register("password", {
@@ -148,15 +89,13 @@ const Register = () => {
                                         },
                                     })}
                                 />
-
                                 {errors.password && <p className='text-error'>{errors.password.message}</p>}
-
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Confirm Password</span>
+                                    <span className="label-text text-white">Confirm Password</span>
                                 </label>
-                                <input className='input input-bordered'
+                                <input className='input input-bordered text-black'
                                     type="password"
                                     placeholder="Confirm Password"
                                     {...register("ConfirmPassword", {
@@ -172,29 +111,19 @@ const Register = () => {
                                     })}
                                 />
                                 {errors.ConfirmPassword && <p className='text-error'>{errors.ConfirmPassword.message}</p>}
-
-
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Photo URL</span>
+                                    <span className="label-text text-white">Photo URL</span>
                                 </label>
-                                <input {...register("photo")} type="text" placeholder='URL' className="input input-bordered w-full max-w-xs" />
+                                <input {...register("photo")} type="text" placeholder='URL' className="input input-bordered w-full max-w-xs text-black" />
                             </div>
-                            <div className="form-control mt-6">
-                                <button className="button-primary">Create an account</button>
+                            <div className="form-control mt-6 flex p-3 items-center justify-center bg-green-600 text-black font-bold">
+                                <button>Create an account</button>
                             </div>
-
+                            <GoogleLogIn></GoogleLogIn>
+                            <p className='mt-2'>Already have an account? <Link to="/logIn" className='btn-link text-black'>Log In Now</Link></p>
                         </form>
-
-                       <div className='p-5 space-y-5'>
-
-                       <GoogleLogIn></GoogleLogIn>
-
-
-<p>Already have an account? <Link to="/logIn" className='btn-link'>Log In Now</Link></p>
-                       </div>
-
                     </div>
                 </div>
             </div>

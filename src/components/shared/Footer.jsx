@@ -66,7 +66,7 @@ const Footer = () => {
                     </div>
                 </div>
             </footer>
-            <hr />
+            <hr className='my-4' />
             <footer className="footer pt-2 pb-4 text-white lg:flex items-center justify-between">
                 <aside className="items-center grid-flow-col">
                     <img className='w-8 mr-2' src={mainLogo} alt="" />
