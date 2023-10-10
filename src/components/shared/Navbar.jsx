@@ -4,7 +4,8 @@ import { AuthContext } from '../../providers/AuthProvider';
 import { FaBars, FaMoon, FaSun } from 'react-icons/fa';
 import { HiBars3, HiXMark } from "react-icons/hi2";
 import ActiveLink from './ActiveLink';
-
+import mainLogo from './../../assets/mainLogo.webp'
+// import testLogo from './../../assets/testLogo.png'
 
 const Navbar = () => {
 
@@ -45,18 +46,21 @@ const Navbar = () => {
         document.querySelector("html").setAttribute("data-theme", localTheme);
     }, [theme]);
     return (
-        <div className='bg-gray-900 text-white    px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen md:px-24 lg:px-8'>
+        <div className='bg-[#007057] px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen md:px-24 lg:px-8'>
             <div className='relative  flex items-center justify-between'>
                 {/* Logo Section */}
                 <Link to='/' className='inline-flex items-center'>
-                    <h1 className="text-3xl font-bold">
-                        <span className="text-orange-400">Dramatix</span>
-                        <span className="text-[#9875ff]">Lab</span>
-                    </h1>
+                    <div className="flex items-center gap-2 lg:gap-4">
+                        <img className='w-8 lg:w-14' src={mainLogo} alt="" />
+                        <p className='italic text-white'>
+                            <span className='text-xl lg:text-3xl font-semibold text-slate-300'>Summer</span>
+                            <span className='font-bold text-xl lg:text-4xl'>Sports</span>
+                        </p>
+                    </div>
                 </Link>
 
                 {/* Nav Items Section */}
-                <ul className='items-center hidden space-x-8 lg:flex'>
+                <ul className='items-center hidden space-x-8 lg:flex font-bold text-white'>
                     <li>
                         <ActiveLink to="/">Home</ActiveLink>
                     </li>
@@ -110,19 +114,22 @@ const Navbar = () => {
                         title='Open Menu'
                         onClick={() => setIsMenuOpen(true)}
                     >
-                        <HiBars3 className='w-5 text-gray-600' />
+                        <HiBars3 size={32} className='text-white' />
                     </button>
                     {isMenuOpen && (
-                        <div className='absolute top-0 left-0 w-full z-10'>
-                            <div className='p-5 bg-gray-950 border rounded shadow-sm'>
+                        <div className='top-0 left-0 w-full z-10 fixed'>
+                            <div className='p-5 bg-[#007057] border rounded shadow-sm'>
                                 {/* Logo & Button section */}
                                 <div className='flex items-center justify-between mb-4'>
                                     <div>
                                         <ActiveLink to='/' className='inline-flex items-center'>
-                                            <h1 className="text-3xl font-bold">
-                                                <span className="text-orange-400">Dramatix</span>
-                                                <span className="text-[#9875ff]">Lab</span>
-                                            </h1>
+                                            <div className='flex gap-2 mb-4'>
+                                                <img className='w-8' src={mainLogo} alt="" />
+                                                <p className='italic text-white'>
+                                                    <span className='text-xl lg:text-3xl font-semibold text-slate-300'>Summer</span>
+                                                    <span className='font-bold text-2xl lg:text-4xl'>Sports</span>
+                                                </p>
+                                            </div>
                                         </ActiveLink>
                                     </div>
                                     {/* Dropdown menu close button */}
@@ -132,13 +139,13 @@ const Navbar = () => {
                                             title='Close Menu'
                                             onClick={() => setIsMenuOpen(false)}
                                         >
-                                            <HiXMark className='w-5 text-gray-600' />
+                                            <HiXMark size={32} className='text-white' />
                                         </button>
                                     </div>
                                 </div>
                                 {/* Mobile Nav Items Section */}
                                 <nav>
-                                    <ul className='space-y-4'>
+                                    <ul className='space-y-4 font-semibold text-white'>
                                         <li>
                                             <ActiveLink to="/">Home</ActiveLink>
                                         </li>
