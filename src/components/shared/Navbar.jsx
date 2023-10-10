@@ -46,7 +46,7 @@ const Navbar = () => {
         document.querySelector("html").setAttribute("data-theme", localTheme);
     }, [theme]);
     return (
-        <div className='bg-[#007057] px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen md:px-24 lg:px-8'>
+        <div className='bg-[#007057] px-4 py-5'>
             <div className='relative  flex items-center justify-between'>
                 {/* Logo Section */}
                 <Link to='/' className='inline-flex items-center'>

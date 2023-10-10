@@ -4,9 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #007057;
+}
 
-.button-primary {
-
-
-  @apply bg-[#9875ff] text-white p-2 font-bold rounded-lg
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border: 1px solid #bbb;
 }
