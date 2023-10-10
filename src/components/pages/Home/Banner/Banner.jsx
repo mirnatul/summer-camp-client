@@ -1,4 +1,12 @@
 import React from 'react';
+
+// image import
+import banner1 from './../../../../assets/images/banner/banner1.jpg'
+import banner2 from './../../../../assets/images/banner/banner2.jpg'
+import banner3 from './../../../../assets/images/banner/banner3.jpg'
+import banner4 from './../../../../assets/images/banner/banner4.jpg'
+import banner5 from './../../../../assets/images/banner/banner5.jpg'
+
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -14,6 +22,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
+import { Link } from 'react-router-dom';
+
 
 
 const Banner = () => {
@@ -33,7 +43,7 @@ const Banner = () => {
         effect={"fade"}
         navigation={true}
         autoplay={{
-          delay: 2500,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -43,40 +53,70 @@ const Banner = () => {
         className="mySwiper"
       >
         <SwiperSlide className='relative'>
-          <img className='lg:h-[600px] object-cover w-screen' src="https://images.unsplash.com/photo-1558970439-add78fc68990?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1620&q=80" />
-
-
-
-
-          <div className='absolute top-5 lg:top-28 left-0  w-52 lg:space-y-10 lg:left-5 lg:w-96  text-white text-center'>
-
-
-            <h1 className='text-white text-xl lg:text-4xl font-extrabold '>Discover Your Dramatic Potential</h1>
-            <p className='hidden lg:block'>Embrace the world of drama and unlock your dramatic potential at DramatixLab. Our expert instructors will guide you through a journey of self-expression, helping you develop essential acting techniques, build confidence, and find your unique voice on stage</p>
+          <img className='lg:h-[600px] object-cover w-screen z-10' src={banner1} />
+          <div className='absolute top-0 left-0  w-full h-full lg:space-y-10 bg-[#fff1] bg-gradient-to-r from-black via-transparent to-black text-white text-center flex flex-col justify-center'>
+            <div className='max-w-[1000px] mx-auto text-slate-300'>
+              <h1 className='text-2xl lg:text-5xl mb-4 font-semibold [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]'>Welcome to summerSports programme</h1>
+              <p className='hidden lg:block my-10 text-lg'>Summer is here! For most of us, we look back on the seemingly endless, carefree summer days of our childhood with fondness and joy. However, now that we are parents, some of us may have mixed feelings about this season for our own kids. How will we manage childcare while working? How can we avoid the “I’m bored!” comments? Are there any educational summer activities we can get them involved in? Why is our grocery bill and electricity suddenly so much higher?</p>
+              <div className='flex gap-2 lg:gap-4 justify-center'>
+                <Link className='bg-green-500 hover:bg-green-400 px-4 lg:px-6 py-2 lg:py-4 text-sm lg:text-lg text-black font-semibold rounded' to='/instructor'>Know our Instructors</Link>
+                <Link className='bg-green-500 hover:bg-green-400 px-4 lg:px-6 py-2 lg:py-4 text-sm lg:text-lg text-black font-semibold rounded' to='/classes'>Visit our Classes</Link>
+              </div>
+            </div>
           </div>
         </SwiperSlide>
         <SwiperSlide className='relative'>
-          <img className='lg:h-[600px] object-cover w-screen' src="https://images.unsplash.com/photo-1579539760267-b2e78d9d735e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" />
-
-          <div className='absolute top-5 lg:top-28 left-0  w-52 lg:space-y-10 lg:left-5 lg:w-96  text-white text-center'>
-
-
-            <h1 className='text-white text-xl lg:text-4xl font-extrabold '>Immerse Yourself in Theatrical Magic</h1>
-            <p className='hidden lg:block'>Step into the enchanting realm of theater and experience the transformative power of storytelling. At DramatixLab, immerse yourself in a world of captivating narratives, dynamic characters, and the magic of live performances. Join us to explore the art of theater and create unforgettable moments on stage.</p>
+          <img className='lg:h-[600px] object-cover w-screen z-10' src={banner2} />
+          <div className='absolute top-0 left-0  w-full h-full lg:space-y-10 bg-[#fff1] bg-gradient-to-r from-black via-transparent to-black text-white text-center flex flex-col justify-center'>
+            <div className='max-w-[1000px] mx-auto text-slate-300'>
+              <h1 className='text-2xl lg:text-5xl mb-4 font-semibold [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]'>Welcome to summerSports programme</h1>
+              <p className='hidden lg:block my-10 text-lg'>Summer is here! For most of us, we look back on the seemingly endless, carefree summer days of our childhood with fondness and joy. However, now that we are parents, some of us may have mixed feelings about this season for our own kids. How will we manage childcare while working? How can we avoid the “I’m bored!” comments? Are there any educational summer activities we can get them involved in? Why is our grocery bill and electricity suddenly so much higher?</p>
+              <div className='flex gap-2 lg:gap-4 justify-center'>
+                <Link className='bg-green-500 hover:bg-green-400 px-4 lg:px-6 py-2 lg:py-4 text-sm lg:text-lg text-black font-semibold rounded' to='/instructor'>Know our Instructors</Link>
+                <Link className='bg-green-500 hover:bg-green-400 px-4 lg:px-6 py-2 lg:py-4 text-sm lg:text-lg text-black font-semibold rounded' to='/classes'>Visit our Classes</Link>
+              </div>
+            </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <img className='lg:h-[600px] object-cover w-screen' src="https://images.unsplash.com/photo-1559782004-0485f6b3529f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" />
-
-
-          <div className='absolute top-5 lg:top-28 left-0  w-52 lg:space-y-10 lg:left-5 lg:w-96  text-white text-center'>
-
-
-            <h1 className='text-white text-xl lg:text-4xl font-extrabold'>Unleash Your Creativity with DramatixLab</h1>
-            <p className='hidden lg:block'>Unleash your imagination and creativity through the performing arts. At DramatixLab, we provide a nurturing environment where aspiring artists can discover their unique talents. From improvisation to scriptwriting, our programs foster creativity, teamwork, and self-expression, empowering you to create extraordinary performances.</p>
+        <SwiperSlide className='relative'>
+          <img className='lg:h-[600px] object-cover w-screen z-10' src={banner3} />
+          <div className='absolute top-0 left-0  w-full h-full lg:space-y-10 bg-[#fff1] bg-gradient-to-r from-black via-transparent to-black text-white text-center flex flex-col justify-center'>
+            <div className='max-w-[1000px] mx-auto text-slate-300'>
+              <h1 className='text-2xl lg:text-5xl mb-4 font-semibold [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]'>Welcome to summerSports programme</h1>
+              <p className='hidden lg:block my-10 text-lg'>Summer is here! For most of us, we look back on the seemingly endless, carefree summer days of our childhood with fondness and joy. However, now that we are parents, some of us may have mixed feelings about this season for our own kids. How will we manage childcare while working? How can we avoid the “I’m bored!” comments? Are there any educational summer activities we can get them involved in? Why is our grocery bill and electricity suddenly so much higher?</p>
+              <div className='flex gap-2 lg:gap-4 justify-center'>
+                <Link className='bg-green-500 hover:bg-green-400 px-4 lg:px-6 py-2 lg:py-4 text-sm lg:text-lg text-black font-semibold rounded' to='/instructor'>Know our Instructors</Link>
+                <Link className='bg-green-500 hover:bg-green-400 px-4 lg:px-6 py-2 lg:py-4 text-sm lg:text-lg text-black font-semibold rounded' to='/classes'>Visit our Classes</Link>
+              </div>
+            </div>
           </div>
         </SwiperSlide>
-
+        <SwiperSlide className='relative'>
+          <img className='lg:h-[600px] object-cover w-screen z-10' src={banner4} />
+          <div className='absolute top-0 left-0  w-full h-full lg:space-y-10 bg-[#fff1] bg-gradient-to-r from-black via-transparent to-black text-white text-center flex flex-col justify-center'>
+            <div className='max-w-[1000px] mx-auto text-slate-300'>
+              <h1 className='text-2xl lg:text-5xl mb-4 font-semibold [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]'>Welcome to summerSports programme</h1>
+              <p className='hidden lg:block my-10 text-lg'>Summer is here! For most of us, we look back on the seemingly endless, carefree summer days of our childhood with fondness and joy. However, now that we are parents, some of us may have mixed feelings about this season for our own kids. How will we manage childcare while working? How can we avoid the “I’m bored!” comments? Are there any educational summer activities we can get them involved in? Why is our grocery bill and electricity suddenly so much higher?</p>
+              <div className='flex gap-2 lg:gap-4 justify-center'>
+                <Link className='bg-green-500 hover:bg-green-400 px-4 lg:px-6 py-2 lg:py-4 text-sm lg:text-lg text-black font-semibold rounded' to='/instructor'>Know our Instructors</Link>
+                <Link className='bg-green-500 hover:bg-green-400 px-4 lg:px-6 py-2 lg:py-4 text-sm lg:text-lg text-black font-semibold rounded' to='/classes'>Visit our Classes</Link>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className='relative'>
+          <img className='lg:h-[600px] object-cover w-screen z-10' src={banner5} />
+          <div className='absolute top-0 left-0  w-full h-full lg:space-y-10 bg-[#fff1] bg-gradient-to-r from-black via-transparent to-black text-white text-center flex flex-col justify-center'>
+            <div className='max-w-[1000px] mx-auto text-slate-300'>
+              <h1 className='text-2xl lg:text-5xl mb-4 font-semibold [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]'>Welcome to summerSports programme</h1>
+              <p className='hidden lg:block my-10 text-lg'>Summer is here! For most of us, we look back on the seemingly endless, carefree summer days of our childhood with fondness and joy. However, now that we are parents, some of us may have mixed feelings about this season for our own kids. How will we manage childcare while working? How can we avoid the “I’m bored!” comments? Are there any educational summer activities we can get them involved in? Why is our grocery bill and electricity suddenly so much higher?</p>
+              <div className='flex gap-2 lg:gap-4 justify-center'>
+                <Link className='bg-green-500 hover:bg-green-400 px-4 lg:px-6 py-2 lg:py-4 text-sm lg:text-lg text-black font-semibold rounded' to='/instructor'>Know our Instructors</Link>
+                <Link className='bg-green-500 hover:bg-green-400 px-4 lg:px-6 py-2 lg:py-4 text-sm lg:text-lg text-black font-semibold rounded' to='/classes'>Visit our Classes</Link>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
       </Swiper>
     </div>
   );

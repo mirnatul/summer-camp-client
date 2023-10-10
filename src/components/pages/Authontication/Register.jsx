@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { FaGoogle } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { updateProfile } from 'firebase/auth';
@@ -10,7 +9,7 @@ import GoogleLogIn from './GoogleLogIn';
 const Register = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const [error, errorMessage] = useState('')
-    const { user, signUp, googleLogin } = useContext(AuthContext)
+    const { signUp } = useContext(AuthContext)
     const navigate = useNavigate()
 
     const onSubmit = data => {
