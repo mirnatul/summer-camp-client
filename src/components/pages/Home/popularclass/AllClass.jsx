@@ -95,7 +95,6 @@ const AllClass = ({ data, selectbutton, studentDashboar }) => {
           <p>Price : ${data.price}</p>
           <p>Total Student  & enrolled : {data.totalEnrolled}</p>
           {
-
             selectbutton && <button onClick={() => handleBookings(data._id)} className={`${isAdmin || Isinstructor || data.availableSeats <= 0 ? 'btn btn-disabled' : 'button-primary'}`}>select now</button>
           }
           {
