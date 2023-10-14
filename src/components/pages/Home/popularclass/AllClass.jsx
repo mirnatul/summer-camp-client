@@ -7,7 +7,7 @@ import useAdmin from '../../../../hooks/useAdmin';
 import useInstructor from '../../../../hooks/useInstructor';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-const AllClass = ({ data, selectbutton, studentDashboar }) => {
+const AllClass = ({ data, selectButton, studentDashboar }) => {
 
   const { user } = useContext(AuthContext)
   const [, refetch] = useBooking()
@@ -84,28 +84,30 @@ const AllClass = ({ data, selectbutton, studentDashboar }) => {
   }
 
   return (
-    <div>
-      <div className={`card w-96  shadow text-base-content h-full relative ${data.availableSeats <= 0 ? 'bg-red-600' : 'bg-base-200'}`}>
-        <figure><img src={data.image} alt="Shoes" /></figure>
-        <p className='badge badge-info text-white absolute right-3 top-2'>${data.price}</p>
-        <div className="card-body">
-          <h2 className="card-title">{data.name}</h2>
-          <p> Instructor: {data.instructor}</p>
-          <p>Available Seats : {data.availableSeats}</p>
-          <p>Price : ${data.price}</p>
-          <p>Total Student  & enrolled : {data.totalEnrolled}</p>
+    <div className={`card w-full shadow-xl rounded-md ${data.availableSeats <= 0 ? 'bg-red-600' : 'bg-slate-300'}`}>
+      <figure className='relative'>
+        <img className='hover:scale-125 transition duration-300' src={data.image} alt="classes" />
+        <p className='absolute top-3 right-3 bg-slate-800 text-white py-2 px-3 font-semibold rounded-md text-lg'>${data.price}</p>
+      </figure>
+      <div className="card-body bg-slate-200 text-slate-800">
+        <h2 className="card-title font-bold">{data.name}</h2>
+        <hr />
+        <p>Instructor: <span className='font-bold'>{data.instructor}</span></p>
+        <p>available seats: {data.availableSeats}</p>
+        <p>total enrolled: {data.totalEnrolled}</p>
+        <div className='text-center mt-6'>
           {
-            selectbutton && <button onClick={() => handleBookings(data._id)} className={`${isAdmin || Isinstructor || data.availableSeats <= 0 ? 'btn btn-disabled' : 'button-primary'}`}>select now</button>
-          }
-          {
-            studentDashboar && <div className='flex justify-between'>
-              <button className='button-primary'>Pay Now</button>
-              <button onClick={() => handleDelete(data._id)} className='btn btn-error'>Delete</button>
-            </div>
+            selectButton && <button onClick={() => handleBookings(data._id)} className={`${isAdmin || Isinstructor || data.availableSeats <= 0 ? 'btn btn-disabled w-full' : 'btn bg-green-600 hover:bg-green-700 border-green-600 w-full'}`}>select now</button>
           }
         </div>
+        {
+          studentDashboar && <div className='flex justify-between'>
+            <button className='button-primary'>Pay Now</button>
+            <button onClick={() => handleDelete(data._id)} className='btn btn-error'>Delete</button>
+          </div>
+        }
       </div>
-    </div>
+    </div >
   );
 };
 

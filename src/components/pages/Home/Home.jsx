@@ -8,7 +8,6 @@ import PerformanceShowCase from '../../shared/PerformanceShowcase'
 import AnotherExtraSection from './AnotherExtraSection';
 import SampleClass from './SampleClass';
 import PageCompo from '../../shared/PageCompo';
-import CareValue from './CareValue';
 import OurActivity from './OurActivity';
 import RegistrationPromotion from './RegistrationPromotion';
 import Testimonals from './Testimonals';
@@ -21,10 +20,6 @@ const Home = () => {
                 <Banner></Banner>
                 <WhatYouWillGet></WhatYouWillGet>
                 <PopularClasses></PopularClasses>
-                <PageCompo>
-                    <CareValue></CareValue>
-                </PageCompo>
-                {/* <AnotherExtraSection></AnotherExtraSection> */}
                 <PageCompo>
                     <TopInstructor></TopInstructor>
                 </PageCompo>
