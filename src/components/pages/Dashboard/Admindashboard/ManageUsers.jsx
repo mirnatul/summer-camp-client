@@ -15,26 +15,28 @@ const ManageUsers = () => {
     const handleMakeAdmin = (id) => {
 
 
-        fetch (`https://dramatix-lab-server-3hg5zxg3j-rayhanuddinfarhad.vercel.app/users/admin/${id}`, {
+        fetch(`http://localhost:5000/users/admin/${id}`, {
 
-        method : 'PATCH'
+            method: 'PATCH'
         })
-        .then (response => response.json())
-        .then (data => {console.log(data)
-        
-        
-        refetch()})
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+
+
+                refetch()
+            })
 
 
 
 
 
-     }
+    }
 
 
 
 
-     const handleMakeInstructor = (id) => {
+    const handleMakeInstructor = (id) => {
 
         Swal.fire({
             title: 'Are you sure?',
@@ -44,34 +46,36 @@ const ManageUsers = () => {
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
             confirmButtonText: 'Yes'
-          }).then((result) => {
+        }).then((result) => {
             if (result.isConfirmed) {
 
 
 
-                fetch (`https://dramatix-lab-server-3hg5zxg3j-rayhanuddinfarhad.vercel.app/users/instructor/${id}`, {
+                fetch(`http://localhost:5000/users/instructor/${id}`, {
 
-                method : 'PATCH'
+                    method: 'PATCH'
                 })
-                .then (response => response.json())
-                .then (data => {console.log(data)
-                
-                refetch()})
-              Swal.fire(
-                'User Role updated',
-                'success'
-              )
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data)
+
+                        refetch()
+                    })
+                Swal.fire(
+                    'User Role updated',
+                    'success'
+                )
             }
-          })
-
-       
+        })
 
 
 
 
 
-        
-      }
+
+
+
+    }
 
     return (
         <div>
@@ -121,8 +125,8 @@ const ManageUsers = () => {
                                         </td>
                                         <td>{userInfo.role}</td>
                                         <th className='flex'>
-                                            <button onClick={() => handleMakeAdmin (userInfo._id)} className={` ${userInfo.role === 'admin' ? 'btn btn-disabled' : 'button-primary' }`}>Make Admin</button>
-                                            <button onClick={() => handleMakeInstructor(userInfo._id)} className={` ${userInfo.role === 'instructor' ? ' btn btn-disabled' : 'button-primary' }`}>Make Instructor</button>
+                                            <button onClick={() => handleMakeAdmin(userInfo._id)} className={` ${userInfo.role === 'admin' ? 'btn btn-disabled' : 'button-primary'}`}>Make Admin</button>
+                                            <button onClick={() => handleMakeInstructor(userInfo._id)} className={` ${userInfo.role === 'instructor' ? ' btn btn-disabled' : 'button-primary'}`}>Make Instructor</button>
                                         </th>
                                     </tr>
                                 )

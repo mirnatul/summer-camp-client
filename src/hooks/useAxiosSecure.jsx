@@ -4,12 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 
 const axiosSecure = axios.create({
-    baseURL: 'https://dramatix-lab-server-3hg5zxg3j-rayhanuddinfarhad.vercel.app', 
-  });
+  baseURL: 'http://localhost:5000',
+});
 
 const useAxiosSecure = () => {
-    const { logOut } = useContext(AuthContext); 
-  const navigate = useNavigate(); 
+  const { logOut } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   useEffect(() => {
     axiosSecure.interceptors.request.use((config) => {

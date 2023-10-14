@@ -65,9 +65,9 @@ const LogIn = () => {
                             <p className='absolute right-2 top-14 text-slate-800'> {show ? <FaRegEyeSlash onClick={() => setShowing(false)}></FaRegEyeSlash> : <FaRegEye onClick={() => setShowing(true)}></FaRegEye>}</p>
                             {errors.password && <p className='text-error'>{errors.password.message}</p>}
                         </div>
-                        <div className="form-control mt-6 flex p-3 items-center justify-center bg-green-600 text-black font-bold">
-                            <button>Login</button>
-                        </div>
+                        <button className="btn form-control mt-6 flex p-3 items-center justify-center bg-green-600 hover:bg-green-600 text-white font-bold border-green-600">
+                            Login
+                        </button>
                         <GoogleLogIn></GoogleLogIn>
                         <p className='mt-2'>New to summerSports? <Link to="/register" className='btn-link text-black'>Register Now!</Link></p>
                     </form>

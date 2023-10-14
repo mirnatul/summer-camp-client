@@ -31,7 +31,7 @@ const AllClass = ({ data, selectButton, studentDashboar }) => {
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://dramatix-lab-server-3hg5zxg3j-rayhanuddinfarhad.vercel.app/myBooking/${id}`, {
+        fetch(`http://localhost:5000/myBooking/${id}`, {
           method: 'DELETE',
         })
           .then(res => res.json())
@@ -52,7 +52,7 @@ const AllClass = ({ data, selectButton, studentDashboar }) => {
 
   const handleBookings = (id) => {
     if (user) {
-      axios.post('https://dramatix-lab-server-3hg5zxg3j-rayhanuddinfarhad.vercel.app/myBooking', item)
+      axios.post('http://localhost:5000/myBooking', item)
         .then(function (response) {
           if (response.data.insertedId) {
             Swal.fire(

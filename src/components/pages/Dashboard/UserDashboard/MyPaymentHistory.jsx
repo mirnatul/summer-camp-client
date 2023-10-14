@@ -4,29 +4,29 @@ import { AuthContext } from '../../../../providers/AuthProvider';
 import moment from 'moment/moment';
 
 const MyPaymentHistory = () => {
-    
-    const {user} = useContext(AuthContext)
 
-    const [classInfo, setClasseInfo] = useState([])
+  const { user } = useContext(AuthContext)
 
-
-    useEffect(() => { 
+  const [classInfo, setClasseInfo] = useState([])
 
 
-
-        fetch (`https://dramatix-lab-server-3hg5zxg3j-rayhanuddinfarhad.vercel.app/paymentHistory/${user?.email}`)
-        .then (res => res.json())
-        .then (data => setClasseInfo(data))
-    },[])
-    return (
-        <div>
+  useEffect(() => {
 
 
+
+    fetch(`http://localhost:5000/paymentHistory/${user?.email}`)
+      .then(res => res.json())
+      .then(data => setClasseInfo(data))
+  }, [])
+  return (
+    <div>
 
 
 
 
-<div className="overflow-x-auto">
+
+
+      <div className="overflow-x-auto">
         <table className="table">
           {/* head */}
           <thead>
@@ -68,7 +68,7 @@ const MyPaymentHistory = () => {
                       </td>
                       <td>{data.name}</td>
 
-                      
+
                       <td>${data.price}</td>
                       <td>Paid</td>
                       <td>{data?.transactionId}</td>
@@ -76,7 +76,7 @@ const MyPaymentHistory = () => {
                       <td>
 
 
-                       
+
 
 
                       </td>
@@ -101,9 +101,9 @@ const MyPaymentHistory = () => {
 
 
 
-            
-        </div>
-    );
+
+    </div>
+  );
 };
 
 export default MyPaymentHistory;

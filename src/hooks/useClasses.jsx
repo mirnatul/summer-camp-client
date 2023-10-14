@@ -5,7 +5,6 @@ const useClasses = () => {
   const { isLoading, error, data: classes = [], refetch } = useQuery({
     queryKey: ['classes'],
     queryFn: () =>
-      // fetch('https://dramatix-lab-server-3hg5zxg3j-rayhanuddinfarhad.vercel.app/classes').then(
       fetch('http://localhost:5000/classes').then(
         (res) => res.json(),
       ),

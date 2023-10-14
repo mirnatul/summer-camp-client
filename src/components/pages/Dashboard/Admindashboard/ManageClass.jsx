@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 
 const ManageClass = () => {
 
-  
+
 
 
   const [classInfo, refetch] = useHandleApproved()
@@ -21,7 +21,7 @@ const ManageClass = () => {
 
 
 
-    fetch(`https://dramatix-lab-server-3hg5zxg3j-rayhanuddinfarhad.vercel.app/approved/${id}`, {
+    fetch(`http://localhost:5000/approved/${id}`, {
       method: 'PATCH'
     })
       .then(res => res.json())
@@ -39,21 +39,23 @@ const ManageClass = () => {
   const handleDeny = (id) => {
 
 
-    fetch(`https://dramatix-lab-server-3hg5zxg3j-rayhanuddinfarhad.vercel.app/deny/${id}`, {
+    fetch(`http://localhost:5000/deny/${id}`, {
       method: 'PATCH'
     })
       .then(res => res.json())
-      .then(data => {console.log(data)
+      .then(data => {
+        console.log(data)
 
 
 
-        
-      
-      
-      
-        refetch()})
 
-    
+
+
+
+        refetch()
+      })
+
+
 
 
     setDisabled(true)
@@ -83,7 +85,7 @@ const ManageClass = () => {
     const message = event.target.feedback.value;
 
     if (feedbackId) {
-      fetch(`https://dramatix-lab-server-3hg5zxg3j-rayhanuddinfarhad.vercel.app/sendFeedback/${feedbackId}`, {
+      fetch(`http://localhost:5000/sendFeedback/${feedbackId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json'

@@ -7,106 +7,51 @@ const auth = getAuth(app);
 export const AuthContext = createContext(null)
 const provider = new GoogleAuthProvider();
 
-
-
 const AuthProvider = ({ children }) => {
-
-
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true);
-
-
-
-
-
-
-
     const signUp = (email, password) => {
         setLoading(true)
-
         return createUserWithEmailAndPassword(auth, email, password)
-
-
     }
-
     const googleLogin = () => {
         setLoading(true)
-
-
-
         return signInWithPopup(auth, provider)
     }
-
     const logOut = () => {
         setLoading(true)
-
         return signOut(auth)
     }
-
     const logIn = (email, password) => {
-
         setLoading(true)
-
-
         return signInWithEmailAndPassword(auth, email, password)
-
-
-
-
     }
-
     const updateUserProile = (name, photo) => {
-
-
-        return updateProfile(auth.currentUser , {
-
-            displayName : name, photoURL  : photo
+        return updateProfile(auth.currentUser, {
+            displayName: name, photoURL: photo
         })
     }
-
-
-
-
     useEffect(() => {
-
-
-
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
-
-
             setUser(currentUser)
-
-
             if (currentUser) {
-
-
-                axios.post(`https://dramatix-lab-server-3hg5zxg3j-rayhanuddinfarhad.vercel.app/jwt`, { email: currentUser.email })
+                axios.post(`http://localhost:5000/jwt`, { email: currentUser.email })
                     .then(data => {
                         localStorage.setItem('access_token', data.data.token)
                         setLoading(false)
                     })
             }
-
             else {
                 localStorage.removeItem('access_token')
             }
             console.log(currentUser);
         })
-
-
         return () => {
-
-
-
             return unsubscribe()
         }
     }, [])
 
-
-
     const authInfo = {
-
-
         user,
         signUp,
         googleLogin,
@@ -116,22 +61,9 @@ const AuthProvider = ({ children }) => {
         updateUserProile
     }
 
-
-
-
-
-
-
-
-
-
     return (
         <AuthContext.Provider value={authInfo}>
-
             {children}
-
-
-
         </AuthContext.Provider>
     );
 };

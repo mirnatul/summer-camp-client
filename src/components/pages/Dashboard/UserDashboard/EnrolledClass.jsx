@@ -4,28 +4,28 @@ import { AuthContext } from '../../../../providers/AuthProvider';
 const EnrolledClass = () => {
 
 
-    const {user} = useContext(AuthContext)
+  const { user } = useContext(AuthContext)
 
-    const [classInfo, setClasseInfo] = useState([])
-
-
-    useEffect(() => { 
+  const [classInfo, setClasseInfo] = useState([])
 
 
-
-        fetch (`https://dramatix-lab-server-3hg5zxg3j-rayhanuddinfarhad.vercel.app/myEnrolled/${user?.email}`)
-        .then (res => res.json())
-        .then (data => setClasseInfo(data))
-    },[])
+  useEffect(() => {
 
 
+
+    fetch(`http://localhost:5000/myEnrolled/${user?.email}`)
+      .then(res => res.json())
+      .then(data => setClasseInfo(data))
+  }, [])
 
 
 
 
-    return (
-        <div>
-<div className="overflow-x-auto">
+
+
+  return (
+    <div>
+      <div className="overflow-x-auto">
         <table className="table">
           {/* head */}
           <thead>
@@ -65,13 +65,13 @@ const EnrolledClass = () => {
                       </td>
                       <td>{data.name}</td>
 
-                      
+
                       <td>{data.price}</td>
                       <td>Enrolled</td>
                       <td>
 
 
-                       
+
 
 
                       </td>
@@ -92,7 +92,7 @@ const EnrolledClass = () => {
 
         </table>
       </div>        </div>
-    );
+  );
 };
 
 export default EnrolledClass;

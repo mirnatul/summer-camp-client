@@ -4,29 +4,29 @@ import { AuthContext } from '../../../../providers/AuthProvider';
 const InstructorMyClass = () => {
 
 
-    const [myclass, setMyClass] = useState([])
+  const [myclass, setMyClass] = useState([])
 
-    const {user} = useContext(AuthContext)
-
-
-    useEffect(() => { 
+  const { user } = useContext(AuthContext)
 
 
-        fetch (`https://dramatix-lab-server-3hg5zxg3j-rayhanuddinfarhad.vercel.app/instructorClass/${user.email}`)
-        .then (res => res.json())
-        .then (data => setMyClass(data))
+  useEffect(() => {
 
 
+    fetch(`http://localhost:5000/instructorClass/${user.email}`)
+      .then(res => res.json())
+      .then(data => setMyClass(data))
 
 
 
 
 
-    }, [])
-    return (
-        <div>
 
-<div className="overflow-x-auto">
+
+  }, [])
+  return (
+    <div>
+
+      <div className="overflow-x-auto">
         <table className="table table-sm">
           {/* head */}
           <thead>
@@ -83,7 +83,7 @@ const InstructorMyClass = () => {
                       <td>
 
 
-                       {data.status === 'approved' || data.status === 'pending' || data.feedback}
+                        {data.status === 'approved' || data.status === 'pending' || data.feedback}
                       </td>
                       <td className='btn btn-primary'>Update</td>
 
@@ -103,9 +103,9 @@ const InstructorMyClass = () => {
           </tbody>
 
         </table>
-      </div>            
-        </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default InstructorMyClass;

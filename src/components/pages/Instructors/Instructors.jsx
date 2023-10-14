@@ -4,14 +4,14 @@ import InstructorList from '../Home/Instructors/InstructorList';
 
 const Instructors = () => {
 
-
     const [instructor] = useIntructors()
+    console.log(instructor);
     return (
         <div className='grid lg:grid-cols-3 gap-5'>
-           {
+            {
 
-            instructor.map (data => <InstructorList data={data} key={data._id}></InstructorList>)
-           }
+                instructor.map(data => <InstructorList data={data} key={data._id}></InstructorList>)
+            }
         </div>
     );
 };

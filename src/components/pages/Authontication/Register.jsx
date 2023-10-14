@@ -30,7 +30,7 @@ const Register = () => {
                     name: name, image: photo, email: registered.email,
                     role: 'student'
                 }
-                axios.post('https://dramatix-lab-server-3hg5zxg3j-rayhanuddinfarhad.vercel.app/users', data)
+                axios.post('http://localhost:5000/users', data)
                     .then(function (response) {
                         console.log(response);
                         reset()
@@ -117,9 +117,9 @@ const Register = () => {
                                 </label>
                                 <input {...register("photo")} type="text" placeholder='URL' className="input input-bordered w-full max-w-xs text-black" />
                             </div>
-                            <div className="form-control mt-6 flex p-3 items-center justify-center bg-green-600 text-black font-bold">
-                                <button>Create an account</button>
-                            </div>
+                            <button className="btn form-control mt-6 flex p-3 items-center justify-center bg-green-600 hover:bg-green-600 text-black font-bold border-green-600 text-white">
+                                Create an Account
+                            </button>
                             <GoogleLogIn></GoogleLogIn>
                             <p className='mt-2'>Already have an account? <Link to="/logIn" className='btn-link text-black'>Log In Now</Link></p>
                         </form>

@@ -16,7 +16,7 @@ const CheckOut = ({ price, data }) => {
 
   const { user } = useContext(AuthContext)
   const [booking, refetch] = useBooking()
-  
+
   const [allClass] = useAllClass()
 
 
@@ -28,7 +28,7 @@ const CheckOut = ({ price, data }) => {
 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
-    fetch("https://dramatix-lab-server-3hg5zxg3j-rayhanuddinfarhad.vercel.app/create-payment-intent", {
+    fetch("http://localhost:5000/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ price }),
@@ -131,7 +131,7 @@ const CheckOut = ({ price, data }) => {
 
       setsuccess(paymentIntent.id)
 
-      fetch(`https://dramatix-lab-server-3hg5zxg3j-rayhanuddinfarhad.vercel.app/payments`, {
+      fetch(`http://localhost:5000/payments`, {
 
         method: 'POST',
 

@@ -9,7 +9,7 @@ const useRecentUser = () => {
   const { isLoading, error, data: recentUser, refetch } = useQuery({
     queryKey: ['recentUser', user?.email],
     queryFn: () =>
-      fetch(`https://dramatix-lab-server.vercel.app/users/${user?.email}`)
+      fetch(`http://localhost:5000/users/${user?.email}`)
         .then(
           (res) => res.json(),
         ),
