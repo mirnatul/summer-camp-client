@@ -5,7 +5,6 @@ import { FaBars, FaMoon, FaSun } from 'react-icons/fa';
 import { HiBars3, HiXMark } from "react-icons/hi2";
 import ActiveLink from './ActiveLink';
 import mainLogo from './../../assets/mainLogo.webp'
-// import testLogo from './../../assets/testLogo.png'
 
 const Navbar = () => {
 
@@ -104,7 +103,6 @@ const Navbar = () => {
                         </button>
                     </div>
                 </ul>
-
 
                 {/* Mobile Navbar Section */}
                 <div className='lg:hidden'>

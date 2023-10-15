@@ -15,6 +15,7 @@ import WhatYouWillGet from './WhatYouWillGet';
 import Contact from './Contact/Contact';
 import OurClient from './OurClient/OurClient';
 import Faq from './Faq/Faq';
+import Plans from './Plans/Plans';
 
 const Home = () => {
     return (
@@ -30,6 +31,7 @@ const Home = () => {
                 <Testimonials></Testimonials>
                 {/* <OurActivity></OurActivity> */}
                 {/* <RegistrationPromotion></RegistrationPromotion> */}
+                <Plans></Plans>
                 <Contact></Contact>
                 <Faq></Faq>
             </div>

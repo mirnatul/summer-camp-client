@@ -26,7 +26,7 @@ const Contact = () => {
     };
 
     return (
-        <div className='py-16'>
+        <div className='py-8 lg:py-16'>
             <div cascade className='text-center mx-auto'>
                 <h1 className='text-white text-3xl lg:text-5xl font-bold italic mb-16'>Contact Us</h1>
             </div>
