@@ -13,11 +13,11 @@ const Plans = () => {
                     <p className='text-center text-3xl font-semibold'>Basic</p>
                     <p className='text-center my-3'><span className=' text-5xl font-bold'>$9</span> /month</p>
                     <ul className='my-8'>
-                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Lorem ipsum dolor sit amet.</li>
-                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Lorem ipsum dolor sit amet.</li>
-                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Lorem ipsum dolor sit amet.</li>
-                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Lorem ipsum dolor sit amet.</li>
-                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Lorem ipsum dolor sit amet.</li>
+                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>One week of camp</li>
+                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Two hours of sports instruction per day</li>
+                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Access to all basic sports facilities and equipment</li>
+                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Camp t-shirt and hat</li>
+                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Snacks and drinks</li>
                     </ul>
                     <div className='text-center mt-6'>
                         <button className='btn w-full'>Start Trial</button>
@@ -28,11 +28,12 @@ const Plans = () => {
                     <p className='text-center text-3xl font-semibold'>Standard</p>
                     <p className='text-center my-3'><span className=' text-5xl font-bold '>$19</span> /month</p>
                     <ul className='my-8'>
-                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Lorem ipsum dolor sit amet.</li>
-                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Lorem ipsum dolor sit amet.</li>
-                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Lorem ipsum dolor sit amet.</li>
-                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Lorem ipsum dolor sit amet.</li>
-                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Lorem ipsum dolor sit amet.</li>
+                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Two weeks of camp</li>
+                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Three hours of sports instruction per day</li>
+                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Access to all standard sports facilities</li>
+                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Camp t-shirt, hat, and water bottle</li>
+                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Snacks and drinks</li>
+                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>One field trip to a local sports facility</li>
                     </ul>
                     <div className='text-center mt-6'>
                         <button className='btn w-full bg-[#007057] hover:bg-green-700 text-white'>Start Trial</button>
@@ -42,11 +43,12 @@ const Plans = () => {
                     <p className='text-center text-3xl font-semibold'>Premium</p>
                     <p className='text-center my-3'><span className=' text-5xl font-bold '>$39</span> /month</p>
                     <ul className='my-8'>
-                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Lorem ipsum dolor sit amet.</li>
-                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Lorem ipsum dolor sit amet.</li>
-                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Lorem ipsum dolor sit amet.</li>
-                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Lorem ipsum dolor sit amet.</li>
-                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Lorem ipsum dolor sit amet.</li>
+                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Three weeks of camp</li>
+                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Four hours of sports instruction per day</li>
+                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Access to all premium sports facilities</li>
+                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Camp t-shirt, hat and backpack</li>
+                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Snacks and drinks</li>
+                        <li className='flex items-center gap-2'><FaCheckCircle></FaCheckCircle>Two field trips to local sports facilities</li>
                     </ul>
                     <div className='text-center mt-6'>
                         <button className='btn w-full'>Start Trial</button>
