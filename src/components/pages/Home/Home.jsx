@@ -12,6 +12,8 @@ import OurActivity from './OurActivity';
 import RegistrationPromotion from './RegistrationPromotion';
 import Testimonials from './Testimonials';
 import WhatYouWillGet from './WhatYouWillGet';
+import Contact from './Contact/Contact';
+import OurClient from './OurClient/OurClient';
 
 const Home = () => {
     return (
@@ -23,9 +25,11 @@ const Home = () => {
                 <PageCompo>
                     <TopInstructor></TopInstructor>
                 </PageCompo>
+                <OurClient></OurClient>
                 <Testimonials></Testimonials>
-                <OurActivity></OurActivity>
-                <RegistrationPromotion></RegistrationPromotion>
+                {/* <OurActivity></OurActivity> */}
+                {/* <RegistrationPromotion></RegistrationPromotion> */}
+                <Contact></Contact>
             </div>
         </>
     );
