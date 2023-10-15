@@ -14,6 +14,7 @@ import Testimonials from './Testimonials';
 import WhatYouWillGet from './WhatYouWillGet';
 import Contact from './Contact/Contact';
 import OurClient from './OurClient/OurClient';
+import Faq from './Faq/Faq';
 
 const Home = () => {
     return (
@@ -30,6 +31,7 @@ const Home = () => {
                 {/* <OurActivity></OurActivity> */}
                 {/* <RegistrationPromotion></RegistrationPromotion> */}
                 <Contact></Contact>
+                <Faq></Faq>
             </div>
         </>
     );

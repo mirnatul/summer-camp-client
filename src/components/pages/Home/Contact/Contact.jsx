@@ -27,10 +27,10 @@ const Contact = () => {
 
     return (
         <div className='py-16'>
-            <div cascade className='text-center mx-auto my-10'>
+            <div cascade className='text-center mx-auto'>
                 <h1 className='text-white text-3xl lg:text-5xl font-bold italic mb-16'>Contact Us</h1>
             </div>
-            <div className='grid lg:grid-cols-2 grid-cols-1 gap-10 lg:gap-20 glass p-10'>
+            <div className='grid lg:grid-cols-2 grid-cols-1 gap-10 lg:gap-20 glass p-4 lg:p-10'>
                 <div>
                     <form ref={form} onSubmit={sendEmail}>
                         <div className='grid grid-cols-2 gap-2 lg:gap-5 my-2 lg:my-6'>
