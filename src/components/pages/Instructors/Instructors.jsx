@@ -5,7 +5,6 @@ import InstructorList from '../Home/Instructors/InstructorList';
 const Instructors = () => {
 
     const [instructor] = useIntructors()
-    console.log(instructor);
     return (
         <div className='grid lg:grid-cols-3 gap-5'>
             {

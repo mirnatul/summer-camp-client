@@ -10,7 +10,7 @@ import SampleClass from './SampleClass';
 import PageCompo from '../../shared/PageCompo';
 import OurActivity from './OurActivity';
 import RegistrationPromotion from './RegistrationPromotion';
-import Testimonals from './Testimonals';
+import Testimonials from './Testimonials';
 import WhatYouWillGet from './WhatYouWillGet';
 
 const Home = () => {
@@ -23,7 +23,7 @@ const Home = () => {
                 <PageCompo>
                     <TopInstructor></TopInstructor>
                 </PageCompo>
-                <Testimonals></Testimonals>
+                <Testimonials></Testimonials>
                 <OurActivity></OurActivity>
                 <RegistrationPromotion></RegistrationPromotion>
             </div>

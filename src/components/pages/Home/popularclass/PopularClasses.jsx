@@ -13,9 +13,9 @@ const PopularClasses = () => {
     return (
         <div className='p-10 rounded-lg'>
             <div cascade className='text-center mx-auto my-10'>
-                <h1 className='text-white text-5xl font-bold italic mb-16'>Popular Classes</h1>
+                <h1 className='text-white text-3xl lg:text-5xl font-bold italic mb-16'>Popular Classes</h1>
             </div>
-            <div className='grid lg:grid-cols-3 gap-10'>
+            <div className='grid lg:grid-cols-3 gap-6 lg:gap-10'>
                 {
                     popularClasses && popularClasses.slice(0, 6).map((data) => <OneInPopular data={data} key={data._id}></OneInPopular>)
                 }

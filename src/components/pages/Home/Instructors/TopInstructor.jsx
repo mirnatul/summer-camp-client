@@ -12,7 +12,7 @@ const TopInstructor = () => {
     return (
         <div>
             <div cascade className='text-center mx-auto my-10'>
-                <h1 className='text-white text-5xl font-bold italic mb-16'>Top Instructors</h1>
+                <h1 className='text-white text-3xl lg:text-5xl font-bold italic mb-16'>Top Instructors</h1>
             </div>
             <div className='glass p-10 rounded-md'>
                 <div className=' w-full mx-auto '>
