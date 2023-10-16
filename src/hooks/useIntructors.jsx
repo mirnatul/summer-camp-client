@@ -5,7 +5,7 @@ const useIntructors = () => {
   const { isLoading, error, data: instructor = [], refetch } = useQuery({
     queryKey: ['instructor'],
     queryFn: () =>
-      fetch('http://localhost:5000/usersIns').then(
+      fetch('https://summer-camp-server-lime-gamma.vercel.app/usersIns').then(
         (res) => res.json(),
       ),
   })

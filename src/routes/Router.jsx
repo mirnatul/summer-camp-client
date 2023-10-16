@@ -78,7 +78,7 @@ export const router = createBrowserRouter([
           },
           {
             path: 'payment/:id',
-            loader: ({ params }) => fetch(`http://localhost:5000/dashboard/payment/${params.id}`),
+            loader: ({ params }) => fetch(`https://summer-camp-server-lime-gamma.vercel.app/dashboard/payment/${params.id}`),
             element: <Payment></Payment>
           },
           {

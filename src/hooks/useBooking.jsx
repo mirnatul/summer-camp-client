@@ -10,7 +10,7 @@ const useBooking = () => {
   const { isLoading, error, data: booking = [], refetch } = useQuery({
     queryKey: ['booking'],
     queryFn: () =>
-      fetch(`http://localhost:5000/myBooking/${user?.email}`).then(
+      fetch(`https://summer-camp-server-lime-gamma.vercel.app/myBooking/${user?.email}`).then(
         (res) => res.json(),
       ),
   })

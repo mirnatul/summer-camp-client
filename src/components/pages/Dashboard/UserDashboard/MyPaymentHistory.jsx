@@ -14,7 +14,7 @@ const MyPaymentHistory = () => {
 
 
 
-    fetch(`http://localhost:5000/paymentHistory/${user?.email}`)
+    fetch(`https://summer-camp-server-lime-gamma.vercel.app/paymentHistory/${user?.email}`)
       .then(res => res.json())
       .then(data => setClasseInfo(data))
   }, [])

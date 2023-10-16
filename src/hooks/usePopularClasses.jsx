@@ -5,7 +5,7 @@ const usePopularClasses = () => {
   const { isLoading, error, data: popularClasses = [], refetch } = useQuery({
     queryKey: ['popularClasses'],
     queryFn: () =>
-      fetch('http://localhost:5000/popularClasses').then(
+      fetch('https://summer-camp-server-lime-gamma.vercel.app/popularClasses').then(
         (res) => res.json(),
       ),
   })

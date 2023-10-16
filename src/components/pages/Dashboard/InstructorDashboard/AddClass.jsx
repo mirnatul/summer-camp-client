@@ -42,7 +42,7 @@ const AddClass = () => {
                     const newItem = { image: imageURL, name: data.classname, instructor: data.InstructorName, email: data.InstructorEmail, availableSeats: parseFloat(data.seats), price: parseFloat(data.price), status: 'pending', totalEnrolled: 0 }
 
 
-                    fetch(`http://localhost:5000/classes`, {
+                    fetch(`https://summer-camp-server-lime-gamma.vercel.app/classes`, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
 

@@ -19,7 +19,7 @@ const GoogleLogIn = () => {
                     name: loggedInUser.displayName, image: loggedInUser.photoURL, email: loggedInUser.email,
                     role: 'student'
                 }
-                axios.post('http://localhost:5000/users', data)
+                axios.post('https://summer-camp-server-lime-gamma.vercel.app/users', data)
                     .then(function (response) {
                     })
                     .catch(function (error) {

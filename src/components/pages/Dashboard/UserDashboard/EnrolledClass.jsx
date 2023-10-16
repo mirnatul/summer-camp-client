@@ -13,7 +13,7 @@ const EnrolledClass = () => {
 
 
 
-    fetch(`http://localhost:5000/myEnrolled/${user?.email}`)
+    fetch(`https://summer-camp-server-lime-gamma.vercel.app/myEnrolled/${user?.email}`)
       .then(res => res.json())
       .then(data => setClasseInfo(data))
   }, [])

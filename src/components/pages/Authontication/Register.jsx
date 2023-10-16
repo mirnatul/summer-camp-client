@@ -30,7 +30,7 @@ const Register = () => {
                     name: name, image: photo, email: registered.email,
                     role: 'student'
                 }
-                axios.post('http://localhost:5000/users', data)
+                axios.post('https://summer-camp-server-lime-gamma.vercel.app/users', data)
                     .then(function (response) {
                         console.log(response);
                         reset()

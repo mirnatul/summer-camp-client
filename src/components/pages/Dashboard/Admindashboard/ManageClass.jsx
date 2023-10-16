@@ -21,7 +21,7 @@ const ManageClass = () => {
 
 
 
-    fetch(`http://localhost:5000/approved/${id}`, {
+    fetch(`https://summer-camp-server-lime-gamma.vercel.app/approved/${id}`, {
       method: 'PATCH'
     })
       .then(res => res.json())
@@ -39,7 +39,7 @@ const ManageClass = () => {
   const handleDeny = (id) => {
 
 
-    fetch(`http://localhost:5000/deny/${id}`, {
+    fetch(`https://summer-camp-server-lime-gamma.vercel.app/deny/${id}`, {
       method: 'PATCH'
     })
       .then(res => res.json())
@@ -85,7 +85,7 @@ const ManageClass = () => {
     const message = event.target.feedback.value;
 
     if (feedbackId) {
-      fetch(`http://localhost:5000/sendFeedback/${feedbackId}`, {
+      fetch(`https://summer-camp-server-lime-gamma.vercel.app/sendFeedback/${feedbackId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json'

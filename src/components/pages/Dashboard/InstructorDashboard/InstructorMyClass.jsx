@@ -12,7 +12,7 @@ const InstructorMyClass = () => {
   useEffect(() => {
 
 
-    fetch(`http://localhost:5000/instructorClass/${user.email}`)
+    fetch(`https://summer-camp-server-lime-gamma.vercel.app/instructorClass/${user.email}`)
       .then(res => res.json())
       .then(data => setMyClass(data))
 

@@ -26,7 +26,7 @@ const MyClass = ({ data }) => {
 
 
 
-        fetch(`http://localhost:5000/myBooking/${id}`, {
+        fetch(`https://summer-camp-server-lime-gamma.vercel.app/myBooking/${id}`, {
 
           method: 'DELETE',
         })

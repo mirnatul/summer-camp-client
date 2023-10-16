@@ -5,7 +5,7 @@ const useHandleApproved = () => {
   const { isLoading, error, data: classInfo, refetch } = useQuery({
     queryKey: ['classInfo'],
     queryFn: () =>
-      fetch(`http://localhost:5000/adminClasses`)
+      fetch(`https://summer-camp-server-lime-gamma.vercel.app/adminClasses`)
         .then(
           (res) => res.json(),
         ),

@@ -31,7 +31,7 @@ const AllClass = ({ data, selectButton, studentDashboar }) => {
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/myBooking/${id}`, {
+        fetch(`https://summer-camp-server-lime-gamma.vercel.app/myBooking/${id}`, {
           method: 'DELETE',
         })
           .then(res => res.json())
@@ -52,7 +52,7 @@ const AllClass = ({ data, selectButton, studentDashboar }) => {
 
   const handleBookings = (id) => {
     if (user) {
-      axios.post('http://localhost:5000/myBooking', item)
+      axios.post('https://summer-camp-server-lime-gamma.vercel.app/myBooking', item)
         .then(function (response) {
           if (response.data.insertedId) {
             Swal.fire(
