@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 
 const OurClient = () => {
     return (
-        <div className='py-8'>
+        <div className='py-8 pb-16'>
             <div cascade className='text-center mx-auto my-10'>
                 <h1 className='text-white text-3xl lg:text-5xl font-bold italic'>Our Client</h1>
             </div>

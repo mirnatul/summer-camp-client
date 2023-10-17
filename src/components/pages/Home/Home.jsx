@@ -16,6 +16,7 @@ import Contact from './Contact/Contact';
 import OurClient from './OurClient/OurClient';
 import Faq from './Faq/Faq';
 import Plans from './Plans/Plans';
+import Features from './Features/Features';
 
 const Home = () => {
     return (
@@ -27,6 +28,7 @@ const Home = () => {
                 <PageCompo>
                     <TopInstructor></TopInstructor>
                 </PageCompo>
+                <Features></Features>
                 <OurClient></OurClient>
                 <Testimonials></Testimonials>
                 {/* <OurActivity></OurActivity> */}
