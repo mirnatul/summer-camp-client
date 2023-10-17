@@ -17,6 +17,7 @@ import OurClient from './OurClient/OurClient';
 import Faq from './Faq/Faq';
 import Plans from './Plans/Plans';
 import Features from './Features/Features';
+import PerformanceOfOurStudents from './PerformanceOfOurStudents/PerformanceOfOurStudents';
 
 const Home = () => {
     return (
@@ -29,6 +30,7 @@ const Home = () => {
                     <TopInstructor></TopInstructor>
                 </PageCompo>
                 <Features></Features>
+                <PerformanceOfOurStudents></PerformanceOfOurStudents>
                 <OurClient></OurClient>
                 <Testimonials></Testimonials>
                 {/* <OurActivity></OurActivity> */}
